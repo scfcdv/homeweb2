@@ -1,0 +1,15 @@
+RewriteEngine On
+# ページ単位で移動
+RewriteRule ^index-old\.html$ https://〇〇/index-new.html [R=301,L]
+# www無しのURLに統一
+RewriteCond %{HTTP_HOST} ^www\.〇〇\.com
+RewriteRule ^(.*) http://〇〇.com/$1 [R=301,L]
+# www有りのURLに統一
+RewriteCond %{HTTP_HOST} ^〇〇\.com
+RewriteRule ^(.*) http://www.〇〇.com/$1 [R=301,L]
+# index.html無しのURLに統一
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ http://〇〇.com/$1 [R=301,L]
+# httpをhttpsに統一
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
