@@ -1,4 +1,13 @@
-    <video class="mp4" autoplay loop muted src="a.mp4"></video>
+    <button class="v">再生</button>
+　　<video　class="mp4" id="video" hidden>
+　　<source src="a.mp4" type="video/mp4">
+　　</video>
+　　<script>
+　　var button = document.getElementsByClassName("v");
+　　var video = document.getElementById("video");
+　　button.addEventListener("click", function() {
+　　video.hidden = !video.hidden;});
+　　</script>
     <style>
     video {
     position: fixed;
