@@ -68,6 +68,8 @@
     document.getElementById('gd-menu26').style.visibility = 'visible'
     document.getElementById('gd-menu27').style.visibility = 'visible'
     document.getElementById('gd-menu28').style.visibility = 'visible'
+    document.getElementById('gd-menu29').style.visibility = 'visible'
+    document.getElementById('v').style.visibility = 'visible'
     document.getElementById('px').style.visibility = 'visible'
     document.getElementById('px2').style.visibility = 'visible'
     document.getElementById('square').style.visibility = 'visible'
@@ -91,6 +93,8 @@
     document.getElementById('gd-menu26').style.visibility = 'hidden'
     document.getElementById('gd-menu27').style.visibility = 'hidden'
     document.getElementById('gd-menu28').style.visibility = 'hidden'
+    document.getElementById('gd-menu29').style.visibility = 'hidden'
+    document.getElementById('v').style.visibility = 'hidden'
     document.getElementById('px').style.visibility = 'hidden'
     document.getElementById('px2').style.visibility = 'hidden'
     document.getElementById('square').style.visibility = 'hidden'
@@ -167,6 +171,10 @@
     <script>
     function buttonClicked18() {
     document.title = "ホラー";}
+    </script>
+    <script>
+    function buttonClicked19() {
+    document.title = "妄想感傷代償連盟";}
     </script>
     <style>
     body{
@@ -246,6 +254,11 @@
     position: fixed;
     bottom: 68.35%;
     left: 42.90%;}
+    #v {
+    margin:0;
+    position: fixed;
+    bottom: 68.35%;
+    left: 49.53%;}
     #px2 {
     margin:0;
     position: fixed;
@@ -296,6 +309,11 @@
     position: fixed;
     bottom: 48.80%;
     left: 42.90%;}
+    #gd-menu29 {
+    margin:0;
+    position: fixed;
+    bottom: 48.80%;
+    left: 49.53%;}
     *,
     *:before,
     *:after {
@@ -435,8 +453,9 @@
     <a id="gd-menu27" class="btn btn-border k" onclick="buttonClicked17();"><span>匿名M</span></a>
     <a id="gd-menu28" class="btn btn-border k" onclick="buttonClicked18();"><span>ホラー</span></a>
     <a id="v" class="btn btn-border k" onclick="clickBtn2()"><span>妄想感傷代償連盟</span></a>
-　　<video autoplay loop width=”100%” height=“100%” id="p2">
-　　<source src="a.mp4" type="video/mp4">
+    <a id="gd-menu29" class="btn btn-border k" onclick="buttonClicked19()"><span>妄想感傷代償連盟</span></a>
+　　<video autoplay loop width=”100%” height=“100%” id="p2" muted autoplay loop>
+　　<source src="a.mp4" type="video/mp4" muted autoplay loop>
 　　</video>
 　　<script>
     document.getElementById("p2").style.visibility ="hidden";
