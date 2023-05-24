@@ -431,12 +431,12 @@
     <a id="gd-menu26" class="btn btn-border k" onclick="buttonClicked16();"><span>目潰し3</span></a>
     <a id="gd-menu27" class="btn btn-border k" onclick="buttonClicked17();"><span>匿名M</span></a>
     <a id="gd-menu28" class="btn btn-border k" onclick="buttonClicked18();"><span>ホラー</span></a>
-    <button class="v">再生</button>
+    <a id="v" class="btn btn-border k" onclick="buttonClicked100();"><span>妄想感傷代償連盟</span></a>
 　　<video　class="mp4" id="video" hidden>
 　　<source src="a.mp4" type="video/mp4">
 　　</video>
 　　<script>
-　　var button = document.getElementsByClassName("v");
+　　var button = document.getElementById("v");
 　　var video = document.getElementById("video");
 　　button.addEventListener("click", function() {
 　　video.hidden = !video.hidden;});
