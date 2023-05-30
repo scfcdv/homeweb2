@@ -120,6 +120,7 @@
     document.getElementById('v').style.visibility = 'hidden'
     document.getElementById('v2').style.visibility = 'hidden'
     document.getElementById('v3').style.visibility = 'hidden'
+    document.getElementById('v4').style.visibility = 'hidden'
     document.getElementById('k').style.visibility = 'hidden'
     document.getElementById('bk').style.visibility = 'hidden'
     }else {
@@ -243,6 +244,7 @@
     document.getElementById('v').style.visibility = 'visible'
     document.getElementById('v2').style.visibility = 'visible'
     document.getElementById('v3').style.visibility = 'visible'
+    document.getElementById('v4').style.visibility = 'visible'
     document.getElementById('px').style.visibility = 'visible'
     document.getElementById('px2').style.visibility = 'visible'
     document.getElementById('square').style.visibility = 'visible'
@@ -282,6 +284,7 @@
     document.getElementById('v').style.visibility = 'hidden'
     document.getElementById('v2').style.visibility = 'hidden'
     document.getElementById('v3').style.visibility = 'hidden'
+    document.getElementById('v4').style.visibility = 'hidden'
     document.getElementById('px').style.visibility = 'hidden'
     document.getElementById('px2').style.visibility = 'hidden'
     document.getElementById('square').style.visibility = 'hidden'}}
@@ -470,6 +473,11 @@
     position: fixed;
     bottom: 61.35%;
     left: 40.30%;}
+    #v4 {
+    margin:0;
+    position: fixed;
+    bottom: 61.35%;
+    left: 46.90%;}
     #px2 {
     margin:0;
     position: fixed;
@@ -740,6 +748,7 @@
     <a style="visibility: hidden;" id="v" class="btn btn-border k" onclick="clickBtn2()"><span>妄想感傷代償連盟</span></a>
     <a style="visibility: hidden;" id="v2" class="btn btn-border k" onclick="clickBtneva()"><span>エヴァンゲリオン</span></a>
     <a style="visibility: hidden;" id="v3" class="btn btn-border k" onclick="clickBtnecho()"><span>ECHO</span></a>
+    <a style="visibility: hidden;" id="v4" class="btn btn-border k" onclick="clickBtnmeruto()"><span>メルト</span></a>
     <a style="visibility: hidden;" id="gd-menu29" class="btn btn-border k" onclick="buttonClicked19()"><span>妄想感傷代償連盟</span></a>
 　　<video autoplay loop width=”100%” height=“100%” id="p2" muted autoplay loop>
 　　<source src="a.mp4" type="video/mp4" muted autoplay loop>
@@ -751,9 +760,10 @@
     if(p2.style.visibility=="visible"){
     p2.style.visibility ="hidden";
     }else{
-    p2.style.visibility ="visible";}}
+    p2.style.visibility ="visible";
+    echo.style.visibility ="hidden";
+    eva.style.visibility ="hidden";}}
     </script>
-　　
     <video autoplay loop width=”100%” height=“100%” id="eva" muted autoplay loop>
     <source src="eva.mp4" type="video/mp4" muted autoplay loop>
     </video>
@@ -764,9 +774,11 @@
     if(eva.style.visibility=="visible"){
     eva.style.visibility ="hidden";
     }else{
-    eva.style.visibility ="visible";}}
+    eva.style.visibility ="visible";
+    p2.style.visibility ="hidden";
+    echo.style.visibility ="hidden";
+    meruto.style.visibility ="hidden";}}
     </script>
-
     <video autoplay loop width=”100%” height=“100%” id="echo" muted autoplay loop>
     <source src="echo.mp4" type="video/mp4" muted autoplay loop>
     </video>
@@ -777,6 +789,23 @@
     if(echo.style.visibility=="visible"){
     echo.style.visibility ="hidden";
     }else{
-    echo.style.visibility ="visible";}}
+    echo.style.visibility ="visible";
+    eva.style.visibility ="hidden";
+    p2.style.visibility ="hidden";
+    meruto.style.visibility ="hidden";}}
     </script>
-        
+    <video autoplay loop width=”100%” height=“100%” id="meruto" muted autoplay loop>
+    <source src="meruto.mp4" type="video/mp4" muted autoplay loop>
+    </video>
+    <script>
+    document.getElementById("meruto").style.visibility ="hidden";
+    function clickBtnmeruto(){
+    const meruto = document.getElementById("meruto");
+    if(meruto.style.visibility=="visible"){
+    meruto.style.visibility ="hidden";
+    }else{
+    meruto.style.visibility ="visible";
+    eva.style.visibility ="hidden";
+    echo.style.visibility ="hidden";
+    p2.style.visibility ="hidden";}}
+    </script>
