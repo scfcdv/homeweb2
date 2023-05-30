@@ -444,6 +444,11 @@
     position: fixed;
     bottom: 1.07%;
     right: 17.35%;}
+    #gd-menu33 {
+    margin:0;
+    position: fixed;
+    bottom: 1.07%;
+    right: 24.85%;}
     #gd-menu13 {
     margin:0;
     position: fixed;
@@ -729,6 +734,7 @@
     <a style="visibility: hidden;" id="gd-menu14" class="btn btn-border k" onclick="buttonClicked9();"><span>ホラー</span></a>
     <a id="gd-menu12" class="btn btn-border k" onclick="set_visibility();"><span>設定画面</span></a>
     <a id="gd-menu31" class="btn btn-border bk" onclick="bv();"><span>数学系統</span></a>
+    <a id="gd-menu33" class="btn btn-border bk" onclick="toggleFullScreen();"><span>全画面切り替え</span></a>
     <p style="visibility: hidden;" class="px2 k" id="px2">タイトル設定</p>
     <a style="visibility: hidden;" id="gd-menu20" class="btn btn-border k" onclick="buttonClicked10();"><span>死</span></a>
     <a style="visibility: hidden;" id="gd-menu21" class="btn btn-border k" onclick="buttonClicked11();"><span>デフォルト</span></a>
@@ -802,4 +808,11 @@
     eva.style.visibility ="hidden";
     echo.style.visibility ="hidden";
     p2.style.visibility ="hidden";}}
+    </script>
+    <script>
+    function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+    document.exitFullscreen();}}
     </script>
