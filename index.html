@@ -2,6 +2,13 @@
 <meta name="google-site-verification" content="dIEMkwV-BDKDuUEecs7R_AE4s1bbXdTniZ7so3HQJwA" />
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2054301472533985" crossorigin="anonymous"></script>
 </head>
+<input style="visibility: hidden;" id="iro" class="k" type="color" id="color-picker">
+<button style="visibility: hidden;" id="iro2" class="k" onclick="aiii();">変更</button>
+<script>
+function aiii() {
+var color = document.getElementById("color-picker").value;
+document.body.style.backgroundColor = color;}
+</script>
 <style>
 video {
 position: fixed;
@@ -1170,11 +1177,4 @@ var reader = new FileReader();
 reader.onload = function(e) {
 document.body.style.backgroundImage = "url(" + e.target.result + ")";}
 reader.readAsDataURL(file);}
-</script>
-<input style="visibility: hidden;" id="iro" class="k" type="color" id="color-picker">
-<button style="visibility: hidden;" id="iro2" class="k" onclick="aiii();">変更</button>
-<script>
-function aiii() {
-var color = document.getElementById("color-picker").value;
-document.body.style.backgroundColor = color;}
 </script>
