@@ -1171,8 +1171,8 @@ reader.onload = function(e) {
 document.body.style.backgroundImage = "url(" + e.target.result + ")";}
 reader.readAsDataURL(file);}
 </script>
-<input class="iro" type="color" id="color-picker">
-<button class="iro2" onclick="a();">変更</button>
+<input style="visibility: hidden;" id="iro" class="k" type="color" id="color-picker">
+<button style="visibility: hidden;" id="iro2" class="k" onclick="a();">変更</button>
 <script>
 function a() {
 var color = document.getElementById("color-picker").value;
