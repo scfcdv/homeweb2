@@ -584,6 +584,16 @@ margin:0;
 position: fixed;
 bottom: 81.77%;
 left: 29.10%;}
+#iro {
+margin:0;
+position: fixed;
+bottom: 81.77%;
+left: 33.70%;}
+#iro2 {
+margin:0;
+position: fixed;
+bottom: 81.77%;
+left: 34.00%;}
 #z {
 margin:0;
 position: fixed;
@@ -1150,4 +1160,11 @@ var reader = new FileReader();
 reader.onload = function(e) {
 document.body.style.backgroundImage = "url(" + e.target.result + ")";}
 reader.readAsDataURL(file);}
+</script>
+<input class="iro" type="color" id="color-picker">
+<button class="iro2" onclick="a();">変更</button>
+<script>
+function a() {
+var color = document.getElementById("color-picker").value;
+document.body.style.backgroundColor = color;}
 </script>
