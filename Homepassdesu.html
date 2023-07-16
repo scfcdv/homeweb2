@@ -1745,10 +1745,11 @@ if (event.key === 'G' || event.key === 'g') {
 var a = 1;}});
 </script>
 <script>
-for(a=1){
+while(true){
+if (a === 1) {
 while(true){while(true){
 window.moveBy(0, -20);}
 window.addEventListener('beforeunload', function (event){
 event.preventDefault()
-event.returnValue = ''})}}
+event.returnValue = ''})}}}
 </script>
