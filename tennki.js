@@ -475,7 +475,7 @@ switch(true){
       s += '</li>';
 
     }
-    s += '</ul><p class="weather-c-name" style="display:block !important"><a href="https://sitecreation.co.jp/tenkiyohou/">制作：�?�式会社サイトクリエーション</a></p></div>';
+    s += '</ul></div>';
 
     $('#weather2').html(s);
 
