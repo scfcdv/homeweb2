@@ -326,7 +326,7 @@ switch(true){
                 for (var h in json[0].timeSeries[1].areas) {
                   for (var k in json[0].timeSeries[1].areas[1].pops) {
                     var rain0 = (json[0].timeSeries[1].areas[1].pops[0]);
-                    $('.d_rain').html(rain0 + "%");
+                    $('.d_rain').html("降水確率" + rain0 + "%");
                     break outer
 
                   }
@@ -435,12 +435,12 @@ switch(true){
                       var rain4 = (json[1].timeSeries[0].areas[0].pops[4]);
                       var rain5 = (json[1].timeSeries[0].areas[0].pops[5]);
                       var rain6 = (json[1].timeSeries[0].areas[0].pops[6]);
-                      $('.rain1').html(rain1 + "%");
-                      $('.rain2').html(rain2 + "%");
-                      $('.rain3').html(rain3 + "%");
-                      $('.rain4').html(rain4 + "%");
-                      $('.rain5').html(rain5 + "%");
-                      $('.rain6').html(rain6 + "%");
+                      $('.rain1').html("降水確率" + rain1 + "%");
+                      $('.rain2').html("降水確率" + rain2 + "%");
+                      $('.rain3').html("降水確率" + rain3 + "%");
+                      $('.rain4').html("降水確率" + rain4 + "%");
+                      $('.rain5').html("降水確率" + rain5 + "%");
+                      $('.rain6').html("降水確率" + rain6 + "%");
                       break outer
 
                     }
