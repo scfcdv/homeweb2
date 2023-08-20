@@ -1,14 +1,14 @@
   var get_date_string2 = function(dt) {
     var date = new Date(dt * 1000);
-    var week = ['日', '�?', '火', '水', '木', '�?', '�?'];
+    var week = ['日', '月', '火', '水', '木', '金', '土'];
     var s = '(' + week[date.getDay()] + ')';
     return s;
   };
 
   var get_date_string1 = function(dt) {
     var date = new Date(dt * 1000);
-    var week = ['日', '�?', '火', '水', '木', '�?', '�?'];
-    var s = date.getMonth() + 1 + '�?';
+    var week = ['日', '月', '火', '水', '木', '金', '土'];
+    var s = date.getMonth() + 1 + '月';
     s += date.getDate() + '日';
     s += '(' + week[date.getDay()] + ')';
     return s;
@@ -19,8 +19,8 @@
   };
 
   var get_weather_string = function(s) {
-    if (/^01/.test(s)) return '晴�?';
-    if (/^0[234]/.test(s)) return '�?��';
+    if (/^01/.test(s)) return '晴れ';
+    if (/^0[234]/.test(s)) return '曇り';
     if (/^(09|10)/.test(s)) return '雨';
     if (/^13/.test(s)) return '雪';
     if (/^11/.test(s)) return '雷';
@@ -336,14 +336,14 @@ switch(true){
           },
           function() {
             // エラー発生時
-            alert('失�?');
+            alert('エラー');
           }
         );
     });
 
 
 
-    var s = '<div class="w_bg"><span class="w_city">'+inputText1+'</span><span class="w_title" id="pc_city">天気予�?�</span></div>';
+    var s = '<div class="w_bg"><span class="w_city">'+inputText1+'</span><span class="w_title" id="pc_city">天気予報</span></div>';
 
     s += '<div class="sep"><ul class="day">';
     s += '<li><span class="day">' + get_date_string1(data.daily[0].dt)  + '</span></li>';
