@@ -462,7 +462,7 @@ switch(true){
         s += '<img class="icon" src="http://openweathermap.org/img/wn/' + icon + '.png">';
       }
       s += '<div class="w_temp"><span class="max_temp" style="display:none"><i class="fa fa-caret-up" style="color:red"></i>' + Math.trunc(list[i].temp.max) + '℃' + '</span><span class="min_temp" style="display:none"><i class="fa fa-caret-down" style="color:blue"></i>';
-      s += Math.trunc(list[i].temp.min) + '℃' + '</span></div><div class="rain_s" style="display:none;font-size: 10px;"><i class="wi wi-umbrella" style="margin-right:3px"></i><span class=rain' + [i] + '></span></div>';
+      s += Math.trunc(list[i].temp.min) + '℃' + '</span></div><div class="rain_s" style="display:none;font-size: 10px;"><span class=rain' + [i] + '></span></div>';
 
       if (list[i].weather.snow) {
         s += '<span class="w_snow" style="display:none"><i class="far fa-snowflake" style="margin-right:3px;font-size: 10px;"></i>' + round_val(list[i].weather.snow) + 'mm' + '</span>';
