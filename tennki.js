@@ -1,15 +1,15 @@
   var get_date_string2 = function(dt) {
     var date = new Date(dt * 1000);
-    var week = ['譌･', '譛�', '轣ｫ', '豌ｴ', '譛ｨ', '驥�', '蝨�'];
+    var week = ['日', '�?', '火', '水', '木', '�?', '�?'];
     var s = '(' + week[date.getDay()] + ')';
     return s;
   };
 
   var get_date_string1 = function(dt) {
     var date = new Date(dt * 1000);
-    var week = ['譌･', '譛�', '轣ｫ', '豌ｴ', '譛ｨ', '驥�', '蝨�'];
-    var s = date.getMonth() + 1 + '譛�';
-    s += date.getDate() + '譌･';
+    var week = ['日', '�?', '火', '水', '木', '�?', '�?'];
+    var s = date.getMonth() + 1 + '�?';
+    s += date.getDate() + '日';
     s += '(' + week[date.getDay()] + ')';
     return s;
   };
@@ -19,12 +19,12 @@
   };
 
   var get_weather_string = function(s) {
-    if (/^01/.test(s)) return '譎ｴ繧�';
-    if (/^0[234]/.test(s)) return '譖�ｊ';
-    if (/^(09|10)/.test(s)) return '髮ｨ';
-    if (/^13/.test(s)) return '髮ｪ';
-    if (/^11/.test(s)) return '髮ｷ';
-    if (/^50/.test(s)) return '髴ｧ';
+    if (/^01/.test(s)) return '晴�?';
+    if (/^0[234]/.test(s)) return '�?��';
+    if (/^(09|10)/.test(s)) return '雨';
+    if (/^13/.test(s)) return '雪';
+    if (/^11/.test(s)) return '雷';
+    if (/^50/.test(s)) return '霧';
     return '';
   };
 
@@ -35,72 +35,72 @@ var deg;
   switch (true) {
 
     case deg > 0 && deg < 21:
-      deg = "蛹�";
+      deg = "�?";
       return deg;
       break;
     case deg >= 22 && deg <= 44:
-      deg = "蛹怜圏譚ｱ";
+      deg = "北北東";
       return deg;
       break;
     case deg >= 45 && deg <= 66:
-      deg = "蛹玲擲";
+      deg = "北東";
       return deg;
       break;
     case deg >= 67 && deg <= 89:
-      deg = "譚ｱ蛹玲擲";
+      deg = "東北東";
       return deg;
       break;
     case deg >= 90 && deg <= 111:
-      deg = "譚ｱ";
+      deg = "東";
       return deg;
       break;
     case deg >= 112 && deg <= 134:
-      deg = "譚ｱ蜊玲擲";
+      deg = "東南東";
       return deg;
       break;
     case deg >= 135 && deg <= 156:
-      deg = "蜊玲擲";
+      deg = "南東";
       return deg;
       break;
     case deg >= 157 && deg <= 179:
-      deg = "蜊怜漉譚ｱ";
+      deg = "南南東";
       return deg;
       break;
     case deg >= 180 && deg <= 201:
-      deg = "蜊�";
+      deg = "�?";
       return deg;
       break;
     case deg >= 202 && deg <= 224:
-      deg = "蜊怜漉隘ｿ";
+      deg = "南南西";
       return deg;
       break;
     case deg >= 225 && deg <= 246:
-      deg = "蜊苓･ｿ";
+      deg = "南西";
       return deg;
       break;
     case deg >= 247 && deg <= 269:
-      deg = "隘ｿ蜊苓･ｿ";
+      deg = "西南西";
       return deg;
       break;
     case deg >= 270 && deg <= 291:
-      deg = "隘ｿ";
+      deg = "西";
       return deg;
       break;
     case deg >= 292 && deg <= 314:
-      deg = "隘ｿ蛹苓･ｿ";
+      deg = "西北西";
       return deg;
       break;
     case deg >= 315 && deg <= 336:
-      deg = "蛹苓･ｿ";
+      deg = "北西";
       return deg;
       break;
     case deg >= 337 && deg <= 359:
-      deg = "蛹怜圏隘ｿ";
+      deg = "北北西";
       return deg;
       break;
 
       default:
-      deg = "繧ｨ繝ｩ繝ｼ"
+      deg = "エラー"
     }
     return;
 }
@@ -110,17 +110,17 @@ var deg;
   var code;
 
 switch(true){
-    case  /蛹玲ｵｷ驕�/.test(search_add):
+    case  /北海�?/.test(search_add):
     var result  = search_add.slice( 3 );
 
-    var array1 = ["遞壼�蟶�","螳苓ｰｷ驛｡迪ｿ謇墓搗","譫晏ｹｸ驛｡豬憺�灘挨逕ｺ","譫晏ｹｸ驛｡荳ｭ鬆灘挨逕ｺ","譫晏ｹｸ驛｡譫晏ｹｸ逕ｺ","螟ｩ蝪ｩ驛｡雎雁ｯ檎伴","遉ｼ譁�Γ遉ｼ譁�伴","蛻ｩ蟆ｻ驛｡蛻ｩ蟆ｻ逕ｺ","蛻ｩ蟆ｻ驛｡蛻ｩ蟆ｻ蟇悟｣ｫ逕ｺ","螟ｩ蝪ｩ驛｡蟷悟ｻｶ逕ｺ"];
-    var array2 = ["譌ｭ蟾晏ｸ�","螢ｫ蛻･蟶�","蜷榊ｯ�ｸ�","蟇瑚憶驥主ｸ�","荳雁ｷ晞Γ鮃ｹ譬也伴","荳雁ｷ晞Γ譚ｱ逾樊･ｽ逕ｺ","荳雁ｷ晞Γ蠖馴ｺｻ逕ｺ","荳雁ｷ晞Γ豈泌ｸ�伴","荳雁ｷ晞Γ諢帛挨逕ｺ","荳雁ｷ晞Γ荳雁ｷ晉伴","荳雁ｷ晞Γ譚ｱ蟾晉伴","荳雁ｷ晞Γ鄒守騒逕ｺ","遨ｺ遏･驛｡荳雁ｯ瑚憶驥守伴","遨ｺ遏･驛｡荳ｭ蟇瑚憶驥守伴","遨ｺ遏･驛｡蜊怜ｯ瑚憶驥守伴","蜍�鴛驛｡蜊�蜀�譚�","荳雁ｷ晞Γ蜥悟ｯ堤伴","荳雁ｷ晞Γ蜑｣豺ｵ逕ｺ","荳雁ｷ晞Γ荳句ｷ晉伴","荳ｭ蟾晞Γ鄒取ｷｱ逕ｺ","荳ｭ蟾晞Γ髻ｳ螽∝ｭ仙ｺ懈搗","荳ｭ蟾晞Γ荳ｭ蟾晉伴","髮ｨ遶憺Γ蟷悟刈蜀�伴","逡呵酔蟶�","蠅玲ｯ幃Γ蠅玲ｯ帷伴","逡呵酔驛｡蟆丞ｹｳ逕ｺ","闍ｫ蜑埼Γ闍ｫ蜑咲伴","闍ｫ蜑埼Γ鄒ｽ蟷檎伴","闍ｫ蜑埼Γ蛻晏ｱｱ蛻･譚�","螟ｩ蝪ｩ驛｡驕�蛻･逕ｺ","螟ｩ蝪ｩ驛｡螟ｩ蝪ｩ逕ｺ"];
-  var array3 = ["譛ｭ蟷悟ｸ�","譛ｭ蟷悟ｸゆｸｭ螟ｮ蛹ｺ","譛ｭ蟷悟ｸょ圏蛹ｺ","譛ｭ蟷悟ｸよ擲蛹ｺ","譛ｭ蟷悟ｸら區遏ｳ蛹ｺ","譛ｭ蟷悟ｸりｱ雁ｹｳ蛹ｺ","譛ｭ蟷悟ｸょ漉蛹ｺ","譛ｭ蟷悟ｸり･ｿ蛹ｺ","譛ｭ蟷悟ｸょ字蛻･蛹ｺ","譛ｭ蟷悟ｸよ焔遞ｲ蛹ｺ","譛ｭ蟷悟ｸよｸ�伐蛹ｺ","豎溷挨蟶�","蜊�ｭｳ蟶�","諱ｵ蠎ｭ蟶�","蛹怜ｺ�ｳｶ蟶�","遏ｳ迢ｩ蟶�","蠖灘挨逕ｺ","譁ｰ遽�豢･譚�","螟募ｼｵ蟶�","蟯ｩ隕区ｲ｢蟶�","鄒主売蟶�","闃ｦ蛻･蟶�","襍､蟷ｳ蟶�","荳臥ｬ�蟶�","貊晏ｷ晏ｸ�","遐ょｷ晏ｸ�","豁悟ｿ怜�蟶�","豺ｱ蟾晏ｸ�","遨ｺ遏･驛｡蜊怜ｹ檎伴","遨ｺ遏･驛｡螂井ｺ墓ｱ溽伴","遨ｺ遏･驛｡荳顔�ょｷ晉伴","螟募ｼｵ驛｡逕ｱ莉∫伴","螟募ｼｵ驛｡髟ｷ豐ｼ逕ｺ","螟募ｼｵ驛｡譬怜ｱｱ逕ｺ","讓ｺ謌ｸ驛｡譛亥ｽ｢逕ｺ","讓ｺ謌ｸ驛｡豬ｦ閾ｼ逕ｺ","讓ｺ謌ｸ驛｡譁ｰ蜊∵ｴ･蟾晉伴","髮ｨ遶憺Γ螯ｹ閭檎央逕ｺ","髮ｨ遶憺Γ遘ｩ辷ｶ蛻･逕ｺ","髮ｨ遶憺Γ髮ｨ遶懃伴","髮ｨ遶憺Γ蛹礼ｫ懃伴","髮ｨ遶憺Γ豐ｼ逕ｰ逕ｺ","蟆乗ｨｽ蟶�","蟲ｶ迚ｧ驛｡蟲ｶ迚ｧ譚�","蟇ｿ驛ｽ驛｡蟇ｿ驛ｽ逕ｺ","蟇ｿ驛ｽ驛｡鮟呈收蜀�伴","逎ｯ隹ｷ驛｡陂ｭ雜顔伴","陌ｻ逕ｰ驛｡繝九そ繧ｳ逕ｺ","陌ｻ逕ｰ驛｡逵溽叫譚�","陌ｻ逕ｰ驛｡逡吝ｯｿ驛ｽ譚�","陌ｻ逕ｰ驛｡蝟懆撃蛻･逕ｺ","陌ｻ逕ｰ驛｡莠ｬ讌ｵ逕ｺ","陌ｻ逕ｰ驛｡蛟ｶ遏･螳臥伴","蟯ｩ蜀�Γ蜈ｱ蜥檎伴","蟯ｩ蜀�Γ蟯ｩ蜀�伴","蜿､螳�Γ豕頑搗","蜿､螳�Γ逾樊�蜀�搗","遨堺ｸｹ驛｡遨堺ｸｹ逕ｺ","蜿､蟷ｳ驛｡蜿､蟷ｳ逕ｺ"," 菴吝ｸるΓ莉∵惠逕ｺ"," 菴吝ｸるΓ菴吝ｸら伴"," 菴吝ｸるΓ襍､莠募ｷ晄搗"];
-    var array4 = ["邯ｲ襍ｰ蟶�","邯ｲ襍ｰ驛｡鄒主ｹ檎伴","邯ｲ襍ｰ驛｡豢･蛻･逕ｺ","譁憺㈹驛｡譁憺㈹逕ｺ","譁憺㈹驛｡貂�㈹逕ｺ","譁憺㈹驛｡蟆乗ｸ�ｰｴ逕ｺ","蟶ｸ蜻るΓ菴仙曹髢鍋伴","邯ｲ襍ｰ驛｡螟ｧ遨ｺ逕ｺ","蛹苓ｦ句ｸ�","蟶ｸ蜻るΓ險灘ｭ仙ｺ懃伴","蟶ｸ蜻るΓ鄂ｮ謌ｸ逕ｺ","邏句挨蟶�","邏句挨驛｡驕�霆ｽ逕ｺ","邏句挨驛｡貉ｧ蛻･逕ｺ","邏句挨驛｡貊昜ｸ顔伴","邏句挨驛｡闊磯Κ逕ｺ","邏句挨驛｡隘ｿ闊磯Κ譚�","邏句挨驛｡髮�ｭｦ逕ｺ"];
-    var array5 = ["譬ｹ螳､蟶�","驥惹ｻ倬Γ蛻･豬ｷ逕ｺ","讓呎ｴ･驛｡荳ｭ讓呎ｴ･逕ｺ","讓呎ｴ･驛｡讓呎ｴ･逕ｺ","逶ｮ譴ｨ驛｡鄒��逕ｺ","驥ｧ霍ｯ蟶�","驥ｧ霍ｯ驛｡驥ｧ霍ｯ逕ｺ","蜴壼ｲｸ驛｡蜴壼ｲｸ逕ｺ","蜴壼ｲｸ驛｡豬應ｸｭ逕ｺ","蟾昜ｸ企Γ讓呵幻逕ｺ","蟾昜ｸ企Γ蠑溷ｭ仙ｱ育伴","髦ｿ蟇帝Γ鮓ｴ螻�搗","逋ｽ邉�驛｡逋ｽ邉�逕ｺ"];
-    var array6 = ["蟶ｯ蠎�ｸ�","豐ｳ譚ｱ驛｡髻ｳ譖ｴ逕ｺ","豐ｳ譚ｱ驛｡螢ｫ蟷檎伴","豐ｳ譚ｱ驛｡荳雁｣ｫ蟷檎伴","豐ｳ譚ｱ驛｡鮖ｿ霑ｽ逕ｺ","荳雁ｷ晞Γ譁ｰ蠕礼伴","荳雁ｷ晞Γ貂�ｰｴ逕ｺ","豐ｳ隘ｿ驛｡闃ｽ螳､逕ｺ","豐ｳ隘ｿ驛｡荳ｭ譛ｭ蜀�搗","豐ｳ隘ｿ驛｡譖ｴ蛻･譚�","蠎�ｰｾ驛｡螟ｧ讓ｹ逕ｺ","蠎�ｰｾ驛｡蠎�ｰｾ逕ｺ","荳ｭ蟾晞Γ蟷募挨逕ｺ","荳ｭ蟾晞Γ豎�逕ｰ逕ｺ","荳ｭ蟾晞Γ雎企��伴","荳ｭ蟾晞Γ譛ｬ蛻･逕ｺ","雜ｳ蟇�Γ雜ｳ蟇�伴","雜ｳ蟇�Γ髯ｸ蛻･逕ｺ","蜊∝享驛｡豬ｦ蟷檎伴"];
-    var array7 = ["螳､陂ｭ蟶�","闍ｫ蟆冗鴬蟶�","逋ｻ蛻･蟶�","莨企＃蟶�","陌ｻ逕ｰ驛｡雎頑ｵｦ逕ｺ","譛臥匠驛｡螢ｮ迸･逕ｺ","逋ｽ閠�Γ逋ｽ閠∫伴","蜍�鴛驛｡蜴夂悄逕ｺ","陌ｻ逕ｰ驛｡豢樒絢貉也伴","蜍�鴛驛｡螳牙ｹｳ逕ｺ","蜍�鴛驛｡繧縺九ｏ逕ｺ","豐呎ｵ�Γ譌･鬮倡伴","豐呎ｵ�Γ蟷ｳ蜿也伴","譁ｰ蜀�驛｡譁ｰ蜀�逕ｺ","豬ｦ豐ｳ驛｡豬ｦ豐ｳ逕ｺ","讒倅ｼｼ驛｡讒倅ｼｼ逕ｺ","蟷梧ｳ蛾Γ縺医ｊ繧ら伴","譌･鬮倬Γ譁ｰ縺ｲ縺�縺狗伴"];
-    var array8 = ["蜃ｽ鬢ｨ蟶�","蛹玲沫蟶�","譚ｾ蜑埼Γ譚ｾ蜑咲伴","譚ｾ蜑埼Γ遖丞ｳｶ逕ｺ","荳顔｣ｯ驛｡遏･蜀�伴","荳顔｣ｯ驛｡譛ｨ蜿､蜀�伴","莠逕ｰ驛｡荳�｣ｯ逕ｺ","闌�Κ驛｡鮖ｿ驛ｨ逕ｺ","闌�Κ驛｡譽ｮ逕ｺ","莠梧ｵｷ驛｡蜈ｫ髮ｲ逕ｺ","螻ｱ雜企Γ髟ｷ荳�Κ逕ｺ","讙懷ｱｱ驛｡豎溷ｷｮ逕ｺ","讙懷ｱｱ驛｡荳翫ヮ蝗ｽ逕ｺ","讙懷ｱｱ驛｡蜴壽ｲ｢驛ｨ逕ｺ","辷ｾ蠢鈴Γ荵咎Κ逕ｺ","螂･蟆ｻ驛｡螂･蟆ｻ逕ｺ","轢ｬ譽夐Γ莉企≡逕ｺ","荵�□驛｡縺帙◆縺ｪ逕ｺ"];
+    var array1 = ["稚�?�?","宗谷郡猿払村","枝幸郡浜�?�別町","枝幸郡中頓別町","枝幸郡枝幸町","天塩郡豊富町","礼�?��礼�?��","利尻郡利尻町","利尻郡利尻富士町","天塩郡幌延町"];
+    var array2 = ["旭川�?","士別�?","名�?�?","富良野�?","上川郡鷹栖町","上川郡東神楽町","上川郡当麻町","上川郡比�?��","上川郡愛別町","上川郡上川町","上川郡東川町","上川郡美瑛町","空知郡上富良野町","空知郡中富良野町","空知郡南富良野町","�?��郡�?�?�?","上川郡和寒町","上川郡剣淵町","上川郡下川町","中川郡美深町","中川郡音威子府村","中川郡中川町","雨竜郡幌加�?��","留萌�?","増毛郡増毛町","留萌郡小平町","苫前郡苫前町","苫前郡羽幌町","苫前郡初山別�?","天塩郡�?別町","天塩郡天塩町"];
+  var array3 = ["札幌�?","札幌市中央区","札幌市北区","札幌市東区","札幌市白石区","札幌市豊平区","札幌市南区","札幌市西区","札幌市厚別区","札幌市手稲区","札幌市�?��区","江別�?","�?���?","恵庭�?","北�?���?","石狩�?","当別町","新�?津�?","夕張�?","岩見沢�?","美唄�?","芦別�?","赤平�?","三�?�?","滝川�?","砂川�?","歌志�?�?","深川�?","空知郡南幌町","空知郡奈井江町","空知郡上�?�川町","夕張郡由仁町","夕張郡長沼町","夕張郡栗山町","樺戸郡月形町","樺戸郡浦臼町","樺戸郡新十津川町","雨竜郡妹背牛町","雨竜郡秩父別町","雨竜郡雨竜町","雨竜郡北竜町","雨竜郡沼田町","小樽�?","島牧郡島牧�?","寿都郡寿都町","寿都郡黒松�?��","磯谷郡蘭越町","虻田郡ニセコ町","虻田郡真狩�?","虻田郡留寿都�?","虻田郡喜茂別町","虻田郡京極町","虻田郡倶知安町","岩�?��共和町","岩�?��岩�?��","古�?��泊村","古�?��神�?�?��","積丹郡積丹町","古平郡古平町"," 余市郡仁木町"," 余市郡余市町"," 余市郡赤井川村"];
+    var array4 = ["網走�?","網走郡美幌町","網走郡津別町","斜里郡斜里町","斜里郡�?��町","斜里郡小�?��町","常呂郡佐呂間町","網走郡大空町","北見�?","常呂郡訓子府町","常呂郡置戸町","紋別�?","紋別郡�?軽町","紋別郡湧別町","紋別郡滝上町","紋別郡興部町","紋別郡西興部�?","紋別郡�?��町"];
+    var array5 = ["根室�?","野付郡別海町","標津郡中標津町","標津郡標津町","目梨郡�??町","釧路�?","釧路郡釧路町","厚岸郡厚岸町","厚岸郡浜中町","川上郡標茶町","川上郡弟子屈町","阿寒郡鶴�?��","白�?郡白�?町"];
+    var array6 = ["帯�?�?","河東郡音更町","河東郡士幌町","河東郡上士幌町","河東郡鹿追町","上川郡新得町","上川郡�?��町","河西郡芽室町","河西郡中札�?��","河西郡更別�?","�?��郡大樹町","�?��郡�?��町","中川郡幕別町","中川郡�?田町","中川郡豊�??��","中川郡本別町","足�?��足�?��","足�?��陸別町","十勝郡浦幌町"];
+    var array7 = ["室蘭�?","苫小牧�?","登別�?","伊達�?","虻田郡豊浦町","有珠郡壮瞥町","白�?��白老町","�?��郡厚真町","虻田郡洞爺湖町","�?��郡安平町","�?��郡�?かわ町","沙�?��日高町","沙�?��平取町","新�?郡新�?町","浦河郡浦河町","様似郡様似町","幌泉郡えりも町","日高郡新ひ�?か町"];
+    var array8 = ["函館�?","北斗�?","松前郡松前町","松前郡福島町","上磯郡知�?��","上磯郡木古�?��","�?田郡�?��町","�?��郡鹿部町","�?��郡森町","二海郡八雲町","山越郡長�?��町","檜山郡江差町","檜山郡上ノ国町","檜山郡厚沢部町","爾志郡乙部町","奥尻郡奥尻町","瀬棚郡今��町","�?��郡せたな町"];
 
     if((array1.includes(result))==true){
       code = 11000;
@@ -148,155 +148,155 @@ switch(true){
       code = ("0" + code).slice( -6 );
     }
     break;
-    case  /髱呈｣ｮ逵�/.test(search_add):
+    case  /青森�?/.test(search_add):
     code = 20000;
     code = ("0" + code).slice( -6 );
     break;
-    case  /蟯ｩ謇狗恁/.test(search_add):
+    case  /岩手県/.test(search_add):
     code = 30000;
     code = ("0" + code).slice( -6 );
     break;
-    case  /螳ｮ蝓守恁/.test(search_add):
+    case  /宮城県/.test(search_add):
     code = 40000;
     code = ("0" + code).slice( -6 );
     break;
-    case  /遘狗伐逵�/.test(search_add):
+    case  /秋田�?/.test(search_add):
     code = 50000;
     code = ("0" + code).slice( -6 );
     break;
-    case  /螻ｱ蠖｢逵�/.test(search_add):
+    case  /山形�?/.test(search_add):
     code = 60000;
     code = ("0" + code).slice( -6 );
     break;
-    case  /遖丞ｳｶ逵�/.test(search_add):
+    case  /福島�?/.test(search_add):
     code = 70000;
     code = ("0" + code).slice( -6 );
     break;
-    case  /譚ｱ莠ｬ驛ｽ/.test(search_add):
+    case  /東京都/.test(search_add):
     code = 130000;
     break;
-    case  /逾槫･亥ｷ晉恁/.test(search_add):
+    case  /神奈川県/.test(search_add):
     code = 140000;
     break;
-    case  /蝓ｼ邇臥恁/.test(search_add):
+    case  /埼玉県/.test(search_add):
     code = 110000;
     break;
-    case  /蜊�痩逵�/.test(search_add):
+    case  /�?���?/.test(search_add):
     code = 120000;
     break;
-    case  /闌ｨ蝓守恁/.test(search_add):
+    case  /茨城県/.test(search_add):
     code = 80000;
     code = ("0" + code).slice( -6 );
     break;
-    case  /譬�惠逵�/.test(search_add):
+    case  /�?���?/.test(search_add):
     code = 90000;
     code = ("0" + code).slice( -6 );
     break;
-    case  /鄒､鬥ｬ逵�/.test(search_add):
+    case  /群馬�?/.test(search_add):
     code = 100000;
     break;
-    case  /螻ｱ譴ｨ逵�/.test(search_add):
+    case  /山梨�?/.test(search_add):
     code = 190000;
     break;
-    case  /譁ｰ貎溽恁/.test(search_add):
+    case  /新潟県/.test(search_add):
     code = 150000;
     break;
-    case  /髟ｷ驥守恁/.test(search_add):
+    case  /長野県/.test(search_add):
     code = 200000;
     break;
-    case  /蟇悟ｱｱ逵�/.test(search_add):
+    case  /富山�?/.test(search_add):
     code = 160000;
     break;
-    case  /遏ｳ蟾晉恁/.test(search_add):
+    case  /石川県/.test(search_add):
     code = 170000;
     break;
-    case  /遖丈ｺ慕恁/.test(search_add):
+    case  /福井県/.test(search_add):
     code = 180000;
     break;
-    case  /諢帷衍逵�/.test(search_add):
+    case  /愛知�?/.test(search_add):
     code = 230000;
     break;
-    case  /蟯宣�逵�/.test(search_add):
+    case  /岐�?�?/.test(search_add):
     code = 210000;
     break;
-    case  /髱吝ｲ｡逵�/.test(search_add):
+    case  /静岡�?/.test(search_add):
     code = 220000;
     break;
-    case  /荳蛾㍾逵�/.test(search_add):
+    case  /三重�?/.test(search_add):
     code = 240000;
     break;
-    case  /螟ｧ髦ｪ蠎�/.test(search_add):
+    case  /大阪�?/.test(search_add):
     code = 270000;
     break;
-    case  /蜈ｵ蠎ｫ逵�/.test(search_add):
+    case  /兵庫�?/.test(search_add):
     code = 280000;
     break;
-    case  /莠ｬ驛ｽ蠎�/.test(search_add):
+    case  /京都�?/.test(search_add):
     code = 260000;
     break;
-    case  /貊玖ｳ逵�/.test(search_add):
+    case  /滋�?�?/.test(search_add):
     code = 250000;
     break;
-    case  /螂郁憶逵�/.test(search_add):
+    case  /奈良�?/.test(search_add):
     code = 290000;
     break;
-    case  /蜥梧ｭ悟ｱｱ逵�/.test(search_add):
+    case  /和歌山�?/.test(search_add):
     code = 300000;
     break;
-    case  /魑･蜿也恁/.test(search_add):
+    case  /鳥取県/.test(search_add):
     code = 310000;
     break;
-    case  /蟲ｶ譬ｹ逵�/.test(search_add):
+    case  /島根�?/.test(search_add):
     code = 320000;
     break;
-    case  /蟯｡螻ｱ逵�/.test(search_add):
+    case  /岡山�?/.test(search_add):
     code = 330000;
     break;
-    case  /蠎�ｳｶ逵�/.test(search_add):
+    case  /�?���?/.test(search_add):
     code = 340000;
     break;
-    case  /螻ｱ蜿｣逵�/.test(search_add):
+    case  /山口�?/.test(search_add):
     code = 350000;
     break;
-    case  /蠕ｳ蟲ｶ逵�/.test(search_add):
+    case  /徳島�?/.test(search_add):
     code = 360000;
     break;
-    case  /鬥吝ｷ晉恁/.test(search_add):
+    case  /香川県/.test(search_add):
     code = 370000;
     break;
-    case  /諢帛ｪ帷恁/.test(search_add):
+    case  /愛媛県/.test(search_add):
     code = 380000;
     break;
-    case  /鬮倡衍逵�/.test(search_add):
+    case  /高知�?/.test(search_add):
     code = 390000;
     break;
-    case  /遖丞ｲ｡逵�/.test(search_add):
+    case  /福岡�?/.test(search_add):
     code = 400000;
     break;
-    case  /螟ｧ蛻�恁/.test(search_add):
+    case  /大�?��/.test(search_add):
     code = 440000;
     break;
-    case  /菴占ｳ逵�/.test(search_add):
+    case  /佐�?�?/.test(search_add):
     code = 410000;
     break;
-    case  /髟ｷ蟠守恁/.test(search_add):
+    case  /長崎県/.test(search_add):
     code = 420000;
     break;
-    case  /辭頑悽逵�/.test(search_add):
+    case  /熊本�?/.test(search_add):
     code = 430000;
     break;
-    case  /螳ｮ蟠守恁/.test(search_add):
+    case  /宮崎県/.test(search_add):
     code = 450000;
     break;
-    case  /鮖ｿ蜈仙ｳｶ逵�/.test(search_add):
+    case  /鹿児島�?/.test(search_add):
     code = 460100;
     break;
-    case  /豐也ｸ�恁/.test(search_add):
+    case  /沖�?��/.test(search_add):
     var result  = search_add.slice( 3 );
-    var array11 = ["驍｣隕�ｸ�","螳憺㍽貉ｾ蟶�","豬ｦ豺ｻ蟶�","邉ｸ貅蟶�","豐也ｸ�ｸ�","雎願ｦ句沁蟶�","縺�ｋ縺ｾ蟶�","蜊怜沁蟶�","隱ｭ隹ｷ譚�","蝌画焔邏咲伴","蛹苓ｰｷ逕ｺ","蛹嶺ｸｭ蝓取搗","荳ｭ蝓取搗","隘ｿ蜴溽伴","荳朱ぅ蜴溽伴","蜊鈴｢ｨ蜴溽伴","貂｡蝌画聞譚�","蠎ｧ髢灘袖譚�","邊溷嵜譚�","貂｡蜷榊万譚�","蜈ｫ驥咲ｬ逕ｺ","蜷崎ｭｷ蟶�","蝗ｽ鬆ｭ譚�","螟ｧ螳懷袖譚�","譚ｱ譚�","莉雁ｸｰ莉∵搗","譛ｬ驛ｨ逕ｺ","諱ｩ邏肴搗","螳憺㍽蠎ｧ譚�","驥第ｭｦ逕ｺ","莨頑ｱ滓搗","莨雁ｹｳ螻区搗","莨頑弍蜷肴搗","荵�ｱｳ蟲ｶ逕ｺ"];
-    var array12 = ["蜊怜､ｧ譚ｱ譚�","蛹怜､ｧ譚ｱ譚�"];
-    var array13 = ["螳ｮ蜿､蟲ｶ蟶�","螟夊憶髢捺搗"];
-    var array14 = ["遏ｳ蝙｣蟶�","遶ｹ蟇檎伴","荳朱ぅ蝗ｽ逕ｺ"];
+    var array11 = ["那�?�?","宜野湾�?","浦添�?","糸�?�?","沖�?�?","豊見城�?","�?��ま�?","南城�?","読谷�?","嘉手納町","北谷町","北中城村","中城村","西原町","与那原町","南風原町","渡嘉敷�?","座間味�?","粟国�?","渡名喜�?","八重�?�町","名護�?","国頭�?","大宜味�?","東�?","今帰仁村","本部町","恩納村","宜野座�?","金武町","伊江村","伊平屋村","伊是名村","�?��島町"];
+    var array12 = ["南大東�?","北大東�?"];
+    var array13 = ["宮古島�?","多良間村"];
+    var array14 = ["石垣�?","竹富町","与那国町"];
     if((array11.includes(result))==true){
       code = 471000;
     }else if((array12.includes(result))==true){
@@ -319,7 +319,7 @@ switch(true){
           dataType: 'json'
         })
         .then(
-          // 蜿門ｾ玲�蜉滓凾
+          // 取得�?功時
           function input(json) {
             for (var i = 1; i < json.length; i++) {
               outer: for (var j in json[1].timeSeries) {
@@ -335,19 +335,19 @@ switch(true){
             }
           },
           function() {
-            // 繧ｨ繝ｩ繝ｼ逋ｺ逕滓凾
-            alert('螟ｱ謨�');
+            // エラー発生時
+            alert('失�?');
           }
         );
     });
 
 
 
-    var s = '<div class="w_bg"><span class="w_city">'+inputText1+'</span><span class="w_title" id="pc_city">螟ｩ豌嶺ｺ亥�ｱ</span></div>';
+    var s = '<div class="w_bg"><span class="w_city">'+inputText1+'</span><span class="w_title" id="pc_city">天気予�?�</span></div>';
 
     s += '<div class="sep"><ul class="day">';
     s += '<li><span class="day">' + get_date_string1(data.daily[0].dt)  + '</span></li>';
-    s += '<li><span class="temp" style="display:none"><i style="color:#c1132e;margin-right:5px" class="fas fa-thermometer-half"></i>' + round_val(data.current.temp) + '邃�' + '</li>';
+    s += '<li><span class="temp" style="display:none"><i style="color:#c1132e;margin-right:5px" class="fas fa-thermometer-half"></i>' + round_val(data.current.temp) + '�?' + '</li>';
     s += '<li><span class="max_temp" style="display:none"><i class="fa fa-caret-up" style="color:red"></i>' + Math.trunc(data.daily[0].temp.max) + '</span><span class="min_temp" style="display:none"><i class="fa fa-caret-down" style="color:blue"></i>' + Math.trunc(data.daily[
         0].temp.min) +
       '</span></li>';
@@ -423,7 +423,7 @@ switch(true){
             dataType: 'json'
           })
           .then(
-            // 蜿門ｾ玲�蜉滓凾
+            // 取得�?功時
             function input(json) {
               for (var i = 1; i < json.length; i++) {
                 outer: for (var j in json[1].timeSeries) {
@@ -450,7 +450,7 @@ switch(true){
             },
             function() {
               //
-              alert('螟ｱ謨�');
+              alert('失�?');
             }
           );
       });
@@ -461,8 +461,8 @@ switch(true){
         var icon = list[i].weather[j].icon;
         s += '<img class="icon" src="http://openweathermap.org/img/wn/' + icon + '.png">';
       }
-      s += '<div class="w_temp"><span class="max_temp" style="display:none"><i class="fa fa-caret-up" style="color:red"></i>' + Math.trunc(list[i].temp.max) + '邃�' + '</span><span class="min_temp" style="display:none"><i class="fa fa-caret-down" style="color:blue"></i>';
-      s += Math.trunc(list[i].temp.min) + '邃�' + '</span></div><div class="rain_s" style="display:none;font-size: 10px;"><i class="wi wi-umbrella" style="margin-right:3px"></i><span class=rain' + [i] + '></span></div>';
+      s += '<div class="w_temp"><span class="max_temp" style="display:none"><i class="fa fa-caret-up" style="color:red"></i>' + Math.trunc(list[i].temp.max) + '�?' + '</span><span class="min_temp" style="display:none"><i class="fa fa-caret-down" style="color:blue"></i>';
+      s += Math.trunc(list[i].temp.min) + '�?' + '</span></div><div class="rain_s" style="display:none;font-size: 10px;"><i class="wi wi-umbrella" style="margin-right:3px"></i><span class=rain' + [i] + '></span></div>';
 
       if (list[i].weather.snow) {
         s += '<span class="w_snow" style="display:none"><i class="far fa-snowflake" style="margin-right:3px;font-size: 10px;"></i>' + round_val(list[i].weather.snow) + 'mm' + '</span>';
@@ -475,7 +475,7 @@ switch(true){
       s += '</li>';
 
     }
-    s += '</ul><p class="weather-c-name" style="display:block !important"><a href="https://sitecreation.co.jp/tenkiyohou/">蛻ｶ菴懶ｼ壽�ｪ蠑丈ｼ夂､ｾ繧ｵ繧､繝医け繝ｪ繧ｨ繝ｼ繧ｷ繝ｧ繝ｳ</a></p></div>';
+    s += '</ul><p class="weather-c-name" style="display:block !important"><a href="https://sitecreation.co.jp/tenkiyohou/">制作：�?�式会社サイトクリエーション</a></p></div>';
 
     $('#weather2').html(s);
 
@@ -487,7 +487,7 @@ switch(true){
         dataType: 'json'
       })
       .then(
-        // 蜿門ｾ玲�蜉滓凾
+        // 取得�?功時
         function input(json) {
           var lon = json[0].geometry.coordinates[0];
           var lat = json[0].geometry.coordinates[1];
@@ -514,7 +514,7 @@ switch(true){
 
         },
         function() {
-          // 繧ｨ繝ｩ繝ｼ逋ｺ逕滓凾
-          alert('螟ｱ謨�');
+          // エラー発生時
+          alert('失�?');
         }
       );
