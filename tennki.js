@@ -355,7 +355,7 @@ switch(true){
     var icon = data.daily[0].weather[0].icon;
     s += '<img class="d_img" src="https://openweathermap.org/img/wn/' + icon + '@2x.png">';
 
-    s += '<div class="weather-box"><div class="snow"><div class="rain_s" style="display:none"><i class="wi wi-umbrella" margin-right:5px"></i><span class="d_rain"></span></div>'
+    s += '<div class="weather-box"><div class="snow"><div class="rain_s" style="display:none"><span class="d_rain"></span></div>'
     if (data.daily[0].weather[0].snow) {
       s += '<span class="w_snow" style="display:none"><i class="far fa-snowflake"></i>' + round_val(data.daily[0].weather[0].snow) + 'mm' + '</span></div>';
     } else {
