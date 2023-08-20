@@ -347,7 +347,7 @@ switch(true){
 
     s += '<div class="sep"><ul class="day">';
     s += '<li><span class="day">' + get_date_string1(data.daily[0].dt)  + '</span></li>';
-    s += '<li><span class="temp" style="display:none"><i style="color:#c1132e;margin-right:5px" class="fas fa-thermometer-half"></i>' + round_val(data.current.temp) + '�?' + '</li>';
+    s += '<li><span class="temp" style="display:none"><i style="color:#c1132e;margin-right:5px" class="fas fa-thermometer-half"></i>' + round_val(data.current.temp) + '℃' + '</li>';
     s += '<li><span class="max_temp" style="display:none"><i class="fa fa-caret-up" style="color:red"></i>' + Math.trunc(data.daily[0].temp.max) + '</span><span class="min_temp" style="display:none"><i class="fa fa-caret-down" style="color:blue"></i>' + Math.trunc(data.daily[
         0].temp.min) +
       '</span></li>';
@@ -461,8 +461,8 @@ switch(true){
         var icon = list[i].weather[j].icon;
         s += '<img class="icon" src="http://openweathermap.org/img/wn/' + icon + '.png">';
       }
-      s += '<div class="w_temp"><span class="max_temp" style="display:none"><i class="fa fa-caret-up" style="color:red"></i>' + Math.trunc(list[i].temp.max) + '�?' + '</span><span class="min_temp" style="display:none"><i class="fa fa-caret-down" style="color:blue"></i>';
-      s += Math.trunc(list[i].temp.min) + '�?' + '</span></div><div class="rain_s" style="display:none;font-size: 10px;"><i class="wi wi-umbrella" style="margin-right:3px"></i><span class=rain' + [i] + '></span></div>';
+      s += '<div class="w_temp"><span class="max_temp" style="display:none"><i class="fa fa-caret-up" style="color:red"></i>' + Math.trunc(list[i].temp.max) + '℃' + '</span><span class="min_temp" style="display:none"><i class="fa fa-caret-down" style="color:blue"></i>';
+      s += Math.trunc(list[i].temp.min) + '℃' + '</span></div><div class="rain_s" style="display:none;font-size: 10px;"><i class="wi wi-umbrella" style="margin-right:3px"></i><span class=rain' + [i] + '></span></div>';
 
       if (list[i].weather.snow) {
         s += '<span class="w_snow" style="display:none"><i class="far fa-snowflake" style="margin-right:3px;font-size: 10px;"></i>' + round_val(list[i].weather.snow) + 'mm' + '</span>';
