@@ -4,6 +4,15 @@
     <meta name="google-site-verification" content="dIEMkwV-BDKDuUEecs7R_AE4s1bbXdTniZ7so3HQJwA" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2054301472533985"
     crossorigin="anonymous"></script>
+    <script>
+    var ks = 0
+    function kss() {
+    if (ks === 0){
+    ks = 1
+    document.getElementById('z').style.visibility = 'hidden'
+    }else{
+    ks = 0
+    </script>
     <style>
     .fixed-right {
     z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
@@ -24,8 +33,7 @@
     padding: 5px; /* テキストと要素の隙間を調整 */}
     </style>
     <div class="fixed-right">
-    <p>縦書きテキスト</p>
-    <a class="btn btn-border t" href="https://scfcdv.github.io/kuizu/" target="_blank"><span>Homeクイズ</span></a>
+    <p onclick="kss()">Homeについて</p>
     </div>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
@@ -111,6 +119,8 @@
     <div class="bk2" id="bvs2" style="visibility: hidden; width: 44%; height: 75%; background-color: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 16px 0 rgba(0, 0, 0, 0.15);">
     </div>
     <div class="bk3" id="bvs3" style="visibility: hidden; width: 44%; height: 75%; background-color: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 16px 0 rgba(0, 0, 0, 0.15);">
+    </div>
+    <div class="ks999" id="bvs3" style="visibility: hidden; width: 100%; height: 100%; background-color: white; position: absolute; top: 50%; left: 50%;">
     </div>
     <script>
     var kesua = 0
