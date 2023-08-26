@@ -9,13 +9,13 @@
     function kss() {
     if (ks === 0){
     ks = 1
-    document.getElementById('z').style.visibility = 'hidden'
+    document.getElementById('ks999').style.visibility = 'visible'
     }else{
     ks = 0
+    document.getElementById('ks999').style.visibility = 'hidden'}}
     </script>
     <style>
-    .fixed-right {
-    z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+    .nfixed-right {
     position: fixed;
     top: 0;
     right: 0;
@@ -27,12 +27,12 @@
     justify-content: center;
     writing-mode: vertical-lr; /* 縦書きの方向指定 */
     transform: rotate(0deg); /* テキストを反転して縦書きにする */}
-    .fixed-right p {
+    .nfixed-right p {
     font-size: 30px;
     margin: 0;
     padding: 5px; /* テキストと要素の隙間を調整 */}
     </style>
-    <div class="fixed-right">
+    <div class="nfixed-right">
     <p onclick="kss()">Homeについて</p>
     </div>
     <script>
@@ -70,14 +70,18 @@
     z-index: 999999;}
     .bk3 {
     z-index: 99999;}
+    .ks9999 {
+    z-index: 99999999999999999;}
     .f {
     z-index: 99999999999;}
     .z {
-    z-index: 99999999999999;}
+    z-index: 99999999999999999999;}
     .zz {
     z-index: 9999999999999999999999999;}
     .god {
     z-index: 99999999999999999999999999999999999999999999999;}
+    .nfixed-right {
+    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;}
     .mp4 {
     z-index: 0;}
     .t {
@@ -120,7 +124,7 @@
     </div>
     <div class="bk3" id="bvs3" style="visibility: hidden; width: 44%; height: 75%; background-color: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 16px 0 rgba(0, 0, 0, 0.15);">
     </div>
-    <div class="ks999" id="bvs3" style="visibility: hidden; width: 100%; height: 100%; background-color: white; position: absolute; top: 50%; left: 50%;">
+    <div class="ks9999" id="ks999" style="visibility: hidden; width: 1000%; height: 1000%; background-color: white; position: absolute; top: 0%; left: 0%;">
     </div>
     <script>
     var kesua = 0
